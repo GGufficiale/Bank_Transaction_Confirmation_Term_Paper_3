@@ -1,0 +1,15 @@
+git branch -m Main           #Поменять имя текущей ветки на Main
+poetry add -G dev pytest     # Установка pytest в dev раздел
+poetry add -G dev pytest-cov # Установка pytest-cov в dev раздел
+
+poetry run pytest --cov=.\src\ # Проверка покрытия тестами
+poetry run pytest --cov-report term-missing --cov=.\src\ # Проверка покрытия тестами со строками
+
+Для корректной работы рабочая папка должна быть везде одинаковая
+При выполнении тестов рабочая папка: !!
+
+Для выполнения покрытия надо обязательно перейти в папку с тестами и уже оттуда проверить покрытие
+cd tests
+poetry run pytest --cov-report term-misssing --cov=..\src\
+
+Проверить рабочую папку можно Path.cwd()
