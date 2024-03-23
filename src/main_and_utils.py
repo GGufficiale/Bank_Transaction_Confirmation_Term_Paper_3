@@ -19,7 +19,7 @@ def filter_data(data):
 
 def last_five_operations(data):
     """
-    Сортировка и вывод последних 5 операций
+    Сортировка и вывод последних пяти операций
     """
     sorted_operations = sorted(data, key=lambda x: x["date"], reverse=True)
     return sorted_operations[:5]
